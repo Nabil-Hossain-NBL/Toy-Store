@@ -4,8 +4,8 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Navbar = () => {
     const navItems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/">Blog</Link></li>
+        <li className=" text-white font-bold "><Link to="/">Home</Link></li>
+        <li className=" text-white font-bold "><Link to="/">Blog</Link></li>
     </>
 
     const {user, logOut} = useContext(AuthContext);
@@ -17,7 +17,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 h-24">
+        <div className="navbar bg-blue-500 h-24">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <Link to='/' className="btn btn-ghost normal-case text-white font-bold text-xl">daisyUI</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -38,10 +38,10 @@ const Navbar = () => {
                 {
                     user ?
                     <>
-                    <button className="btn btn-outline btn-secondary" onClick={handleLogOut}>Logout</button>
+                    <button className="btn btn-primary" onClick={handleLogOut}>Logout</button>
                     </>
                     :
-                <Link to="/login" className="btn btn-outline btn-secondary">Login</Link>
+                <Link to="/login" className="btn btn-active btn-primary">Login</Link>
                 }
                 {/* <Link to="/" className="btn btn-outline btn-secondary ml-2">Logout</Link> */}
                 
