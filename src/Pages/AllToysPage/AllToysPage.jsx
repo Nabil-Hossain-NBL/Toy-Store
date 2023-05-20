@@ -29,7 +29,7 @@ const AllToysPage = () => {
     const viewAll = () => {
         setActiveTab("viewAll")
         setClicked("clicked")
-        console.log(clicked);
+        
     }
 
     return (

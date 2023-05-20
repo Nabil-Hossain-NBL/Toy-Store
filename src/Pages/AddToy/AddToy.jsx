@@ -15,7 +15,7 @@ const AddToy = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+                
                 if (result.insertedId) {
                     Swal.fire({
                         title: 'Success!',
@@ -25,7 +25,7 @@ const AddToy = () => {
                     })
                 }
             })
-        console.log(data);
+        
         e.target.reset();
     };
     return (

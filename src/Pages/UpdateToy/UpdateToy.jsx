@@ -5,8 +5,7 @@ import Swal from "sweetalert2";
 import Navbar from "../Shared/Navbar/Navbar";
 
 const UpdateToy = () => {
-    const toy = useLoaderData();
-    console.log(toy);
+    const toy = useLoaderData()
     const { _id, name, price, quantity, discription } = toy
 
     const { register, handleSubmit } = useForm();
@@ -18,7 +17,6 @@ const UpdateToy = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-                console.log(result);
                 if (result.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Updated successfully!',
@@ -28,7 +26,6 @@ const UpdateToy = () => {
                     })
                 }
             });
-        console.log(data);
     };
     return (
         <>

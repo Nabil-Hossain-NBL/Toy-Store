@@ -13,10 +13,9 @@ const ToyDetails = () => {
         fetch(`https://project-server-rust.vercel.app/toy/${id}`)
             .then((res) => res.json())
             .then((result) => {
-                console.log(result);
                 setDetails(result);
             });
-    }, []);
+    }, [id]);
 
     return (
         <>

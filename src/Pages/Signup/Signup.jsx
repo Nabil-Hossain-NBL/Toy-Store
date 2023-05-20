@@ -22,18 +22,16 @@ const Signup = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password, photoUrl);
 
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 updateUserData(result.user, name, photoUrl);
                 navigate('/')
                 setError('')
                 form.reset();
-                if (result.user) {
+                if (user) {
                     Swal.fire({
                         title: 'SignUp successfull!',
                         text: 'SignUp successfull',
@@ -56,7 +54,7 @@ const Signup = () => {
             photoURL: photoURL
         })
             .then(() => {
-                console.log('user name updated')
+                console.log('')
             })
             .catch(error => {
                 setError(error.message);
