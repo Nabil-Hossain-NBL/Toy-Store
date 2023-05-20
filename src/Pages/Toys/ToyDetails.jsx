@@ -10,7 +10,7 @@ const ToyDetails = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/${id}`)
+        fetch(`https://project-server-rust.vercel.app/toy/${id}`)
             .then((res) => res.json())
             .then((result) => {
                 console.log(result);

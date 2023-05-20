@@ -57,7 +57,7 @@ const router = createBrowserRouter([
             {
                 path: 'UpdateToy/:id',
                 element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/toy/${params.id}`)
+                loader: ({params}) => fetch(`https://project-server-rust.vercel.app/toy/${params.id}`)
             },
             {
                 path: "*",

@@ -8,7 +8,7 @@ const AddToy = () => {
     const { user } = useContext(AuthContext)
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
-        fetch("http://localhost:5000/add-toy", {
+        fetch("https://project-server-rust.vercel.app/add-toy", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),

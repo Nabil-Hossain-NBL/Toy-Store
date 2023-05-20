@@ -11,7 +11,7 @@ const AllToysPage = () => {
     const [clicked, setClicked] = useState("");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/all-toys/${activeTab}`)
+        fetch(`https://project-server-rust.vercel.app/all-toys/${activeTab}`)
             .then((res) => res.json())
             .then((result) => {
                 setToys(result);
@@ -19,7 +19,7 @@ const AllToysPage = () => {
     }, [activeTab]);
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/getToysByText/${searchText}`)
+        fetch(`https://project-server-rust.vercel.app/getToysByText/${searchText}`)
             .then((res) => res.json())
             .then((result) => {
                 setToys(result);

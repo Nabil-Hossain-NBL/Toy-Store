@@ -11,7 +11,7 @@ const UpdateToy = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        fetch(`http://localhost:5000/toy/${_id}`, {
+        fetch(`https://project-server-rust.vercel.app/toy/${_id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
