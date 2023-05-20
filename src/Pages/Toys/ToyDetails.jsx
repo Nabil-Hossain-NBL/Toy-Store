@@ -23,7 +23,7 @@ const ToyDetails = () => {
             <Navbar></Navbar>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex w-full flex-col justify-around lg:flex-row">
-                    <img src="https://image.smythstoys.com/picture/desktop/210181.webp" className="max-w-sm lg:w-1/2 rounded-lg shadow-2xl" />
+                    <img src={details.img} className="max-w-sm lg:w-1/2 rounded-lg shadow-2xl" />
                     <div className="card w-96 h-full p-2 bg-base-100 shadow-xl">
                         <div className="card-body">
                             <div className="">
@@ -31,7 +31,7 @@ const ToyDetails = () => {
                             </div>
 
                             <h2 className="card-title font-bold text-3xl">{details.name}</h2>
-                            <p className="font-bold text-red-500 text-1xl">${details.price}.00</p>
+                            <p className="font-bold text-red-500 text-1xl">${details.price}</p>
                             <p>{details.discription}</p>
                             <span>available quantity: <span className='font-bold' >{details.quantity}</span></span>
 
