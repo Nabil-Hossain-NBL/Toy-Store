@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 import { FaStar } from "react-icons/fa";
+import useTitle from "../../hooks/useTitle";
 
 const ToyDetails = () => {
     const { id } = useParams()
 
     const [details, setDetails] = useState([]);
+    useTitle(`${details.name}`)
 
     useEffect(() => {
         fetch(`https://project-server-rust.vercel.app/toy/${id}`)

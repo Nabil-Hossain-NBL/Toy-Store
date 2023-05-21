@@ -4,6 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
 
@@ -11,6 +12,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+
+    useTitle('Login')
 
     const handleLogin = event => {
         event.preventDefault()

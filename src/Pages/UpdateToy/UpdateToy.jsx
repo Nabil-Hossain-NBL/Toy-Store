@@ -3,8 +3,10 @@ import Footer from "../Shared/Footer/Footer";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import Navbar from "../Shared/Navbar/Navbar";
+import useTitle from "../../hooks/useTitle";
 
 const UpdateToy = () => {
+    useTitle('Update')
     const toy = useLoaderData()
     const { _id, name, price, quantity, discription } = toy
 

@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
+import useTitle from "../../hooks/useTitle";
 
 const AllToysPage = () => {
     const [toys, setToys] = useState([]);
     const [searchText, setSearchText] = useState("");
-
+    useTitle('All Toys')
     const [activeTab, setActiveTab] = useState("a");
     const [clicked, setClicked] = useState("");
 

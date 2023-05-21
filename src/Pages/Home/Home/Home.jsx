@@ -1,3 +1,4 @@
+import useTitle from "../../../hooks/useTitle";
 import BottomBanner from "../../BottomBanner/BottomBanner";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
@@ -7,6 +8,7 @@ import CatagoryToy from "../CatagoryToy/CatagoryToy";
 import SaleSection from "../Sale Section/SaleSection";
 
 const Home = () => {
+    useTitle('Home')
     return (
         <>
         <Navbar></Navbar>

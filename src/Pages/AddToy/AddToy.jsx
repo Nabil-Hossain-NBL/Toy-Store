@@ -4,8 +4,10 @@ import Navbar from '../Shared/Navbar/Navbar';
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from 'sweetalert2'
+import useTitle from "../../hooks/useTitle";
 const AddToy = () => {
-    const { user } = useContext(AuthContext)
+    const { user } = useContext(AuthContext);
+    useTitle('Add Toy')
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
         fetch("https://project-server-rust.vercel.app/add-toy", {

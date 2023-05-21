@@ -1,7 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ErrorPage = () => {
+    useTitle('Error')
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex w-full flex-col justify-around lg:flex-row">

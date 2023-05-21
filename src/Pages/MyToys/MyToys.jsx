@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
+import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
+
+    useTitle('My Toys')
     const { user } = useContext(AuthContext);
 
     const [toys, setToys] = useState([]);

@@ -1,8 +1,10 @@
+import useTitle from "../../hooks/useTitle";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 
 
 const Blog = () => {
+    useTitle('Blog')
     return (
         <div className="mb-0">
             <Navbar></Navbar>

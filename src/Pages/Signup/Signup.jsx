@@ -5,8 +5,10 @@ import Swal from "sweetalert2";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 import { updateProfile } from "firebase/auth";
+import useTitle from "../../hooks/useTitle";
 
 const Signup = () => {
+    useTitle('Signup')
 
     const [error, setError] = useState('')
 

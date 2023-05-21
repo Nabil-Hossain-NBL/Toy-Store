@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SaleSection = () => {
     return (
-        <div className="flex flex-col lg:flex-row itesms-center max-w-6xl text-center lg:justify-between m-auto">
+        <div className="flex flex-col lg:flex-row itesms-center max-w-6xl text-center lg:justify-between m-auto" data-aos="fade-up">
             <div className="card mt-5 m-auto lg:mr-6 w-auto bg-slate-200 ">
                 <figure><img src="https://image.smythstoys.com/images/secondary/toys/gabbys-dollhouse-05-23-8c5491.webp" alt="Shoes" /></figure>
                 <div className="card-body">
